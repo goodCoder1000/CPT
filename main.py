@@ -27,3 +27,12 @@ while True:
     user_input = input("Enter the sequence (no spaces): ").upper()
     
     # Check if correct
+    if user_input == "".join(sequence):
+        print("Correct!\n")
+        round_number += 1
+        time.sleep(1)
+    else:
+        print("Wrong!")
+        print("The correct sequence was:", "".join(sequence))
+        print("You reached Round", round_number)
+        break
